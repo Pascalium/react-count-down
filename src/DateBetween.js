@@ -18,7 +18,7 @@ let DateBetween = function (startDate, endDate, time) {
     let between = [];
 
     if (days) {
-        between.push(`<span class="game-timer-display-number">${moment(time).format('l LT')}</span>`);
+        between.push(`${moment(time).format('l LT')}`);
     } else if (hours) {
         between.push(`Today <span class="game-timer-display-number">${moment(time).format('LT')}</span>`);
     } else {
