@@ -22,12 +22,12 @@ export default class Countdown extends Component {
     }
 
     tick() {
-        let startDate = moment().unix();
-        let endDate = moment(this.props.options.endDate).unix();
-        let remaining = DateBetween(startDate, endDate, this.props.options.endDate);
+        let startDate = new Date()
+        let endDate = new Date(this.props.options.endDate)
+        let remaining = DateBetween(startDate, endDate, this.props.options.endDate)
 
         if (remaining === false) {
-            window.clearInterval(this.interval);
+            window.clearInterval(this.interval)
             this.props.options['cb'] ? this.props.options.cb() : false
         }
 
