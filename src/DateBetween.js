@@ -17,10 +17,10 @@ let DateBetween = function(startDate, endDate) {
 
   let between = [];
 
-  days > 0 ? between.push(`${days} DAY{days > 1 ? 'S' : ''}`) : false;
-  hours > 0 ? between.push(`${hours} HOUR{hours > 1 ? 'S' : ''}`) : false;
-  minutes > 0 ? between.push(`${minutes} MIN{minutes > 1 ? '' : ''}`) : false;
-  seconds > 0 ? between.push(`${seconds} SEC{seconds > 1 ? '' : ''}`) : false;
+  days > 0 ? between.push(`<span styleName="game-timer-display-number">${days}</span> DAY{days > 1 ? 'S' : ''}`) : false;
+  hours > 0 ? between.push(`<span styleName="game-timer-display-number">${hours}</span> HOUR{hours > 1 ? 'S' : ''}`) : false;
+  minutes > 0 ? between.push(`<span styleName="game-timer-display-number">${minutes}</span> MIN{minutes > 1 ? '' : ''}`) : false;
+  seconds > 0 ? between.push(`<span styleName="game-timer-display-number">${seconds}</span> SEC{seconds > 1 ? '' : ''}`) : false;
 
   return between.join(' ');
 }
