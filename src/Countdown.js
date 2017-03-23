@@ -24,7 +24,7 @@ export default class Countdown extends Component {
     tick() {
         let startDate = moment().unix();
         let endDate = moment(this.props.options.endDate).unix();
-        let remaining = DateBetween(startDate, endDate);
+        let remaining = DateBetween(startDate, endDate, this.props.options.endDate);
 
         if (remaining === false) {
             window.clearInterval(this.interval);
